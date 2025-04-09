@@ -8,7 +8,7 @@ import requests
 import logging
 
 # Initialize NewsAPI client
-newsapi = NewsApiClient(api_key='YOUR_NEWSAPI_KEY')
+newsapi = NewsApiClient(api_key='b309cd0d-0724-42fd-9368-56971ec1784d')
 
 # List of reliable news sources
 reliable_sources = [
