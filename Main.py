@@ -116,4 +116,19 @@ def continuous_search_and_trade(symbol, interval=300):
 
 # Example usage
 continuous_search_and_trade('AAPL')
+import requests
+
+def execute_trade(symbol, action, quantity):
+    url = "https://api.tradovate.com/v1/orders"
+    headers = {'Authorization': 'Bearer YOUR_API_KEY'}
+    data = {
+        'symbol': symbol,
+        'action': action,  # 'BUY' or 'SELL'
+        'quantity': quantity,
+        'orderType': 'LIMIT',
+        'price': current_price  # Fetch this from your live market data
+    }
+    response = requests.post(url, headers=headers, data=data)
+    print(f"Trade executed: {response.json()}")
+
 
