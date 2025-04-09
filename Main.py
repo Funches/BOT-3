@@ -77,7 +77,7 @@ def store_news_in_db(news_articles):
 
 # Send alerts to Discord
 def send_discord_alert(message):
-    webhook_url = 'YOUR_DISCORD_WEBHOOK_URL'
+    webhook_url = 'https://discord.gg/S5dm6nZU'
     payload = {'content': message}
     requests.post(webhook_url, data=payload)
 
